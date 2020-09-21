@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF327D7A25187BA200036C4D /* ts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF327D7825187BA200036C4D /* ts.cpp */; platformFilter = ios; };
+		FF327D7C25187BC500036C4D /* ac3.h in Headers */ = {isa = PBXBuildFile; fileRef = FF327D7725187BA200036C4D /* ac3.h */; platformFilter = ios; };
+		FF327D7D25187BC500036C4D /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = FF327D7625187BA200036C4D /* common.h */; platformFilter = ios; };
+		FF327D7E25187BC500036C4D /* h264.h in Headers */ = {isa = PBXBuildFile; fileRef = FF327D7925187BA200036C4D /* h264.h */; platformFilter = ios; };
+		FF327D7F25187BC500036C4D /* ts.h in Headers */ = {isa = PBXBuildFile; fileRef = FF327D7525187BA200036C4D /* ts.h */; platformFilter = ios; };
+		FF327D9A2518A35D00036C4D /* Demuxer.h in Headers */ = {isa = PBXBuildFile; fileRef = FF327D982518A35D00036C4D /* Demuxer.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		FF327D9B2518A35D00036C4D /* Demuxer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF327D992518A35D00036C4D /* Demuxer.mm */; platformFilter = ios; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FF327D6725187B7900036C4D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FF327D6925187B7900036C4D /* libTsDemuxer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTsDemuxer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF327D7525187BA200036C4D /* ts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ts.h; sourceTree = "<group>"; };
+		FF327D7625187BA200036C4D /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		FF327D7725187BA200036C4D /* ac3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ac3.h; sourceTree = "<group>"; };
+		FF327D7825187BA200036C4D /* ts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ts.cpp; sourceTree = "<group>"; };
+		FF327D7925187BA200036C4D /* h264.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = h264.h; sourceTree = "<group>"; };
+		FF327D982518A35D00036C4D /* Demuxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Demuxer.h; sourceTree = "<group>"; };
+		FF327D992518A35D00036C4D /* Demuxer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Demuxer.mm; sourceTree = "<group>"; };
+		FF5768592518AB8900C4A409 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		FF57685B2518AB9B00C4A409 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF327D6625187B7900036C4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF327D6025187B7900036C4D = {
+			isa = PBXGroup;
+			children = (
+				FF327D6B25187B7900036C4D /* TsDemuxer */,
+				FF327D6A25187B7900036C4D /* Products */,
+				FF5768582518AB8900C4A409 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FF327D6A25187B7900036C4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF327D6925187B7900036C4D /* libTsDemuxer.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF327D6B25187B7900036C4D /* TsDemuxer */ = {
+			isa = PBXGroup;
+			children = (
+				FF327D7725187BA200036C4D /* ac3.h */,
+				FF327D7625187BA200036C4D /* common.h */,
+				FF327D7925187BA200036C4D /* h264.h */,
+				FF327D7825187BA200036C4D /* ts.cpp */,
+				FF327D7525187BA200036C4D /* ts.h */,
+				FF327D982518A35D00036C4D /* Demuxer.h */,
+				FF327D992518A35D00036C4D /* Demuxer.mm */,
+			);
+			path = TsDemuxer;
+			sourceTree = "<group>";
+		};
+		FF5768582518AB8900C4A409 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF57685B2518AB9B00C4A409 /* libz.tbd */,
+				FF5768592518AB8900C4A409 /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FF327D7B25187BBD00036C4D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF327D9A2518A35D00036C4D /* Demuxer.h in Headers */,
+				FF327D7C25187BC500036C4D /* ac3.h in Headers */,
+				FF327D7D25187BC500036C4D /* common.h in Headers */,
+				FF327D7E25187BC500036C4D /* h264.h in Headers */,
+				FF327D7F25187BC500036C4D /* ts.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FF327D6825187B7900036C4D /* TsDemuxer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF327D7225187B7900036C4D /* Build configuration list for PBXNativeTarget "TsDemuxer" */;
+			buildPhases = (
+				FF327D7B25187BBD00036C4D /* Headers */,
+				FF327D6525187B7900036C4D /* Sources */,
+				FF327D6625187B7900036C4D /* Frameworks */,
+				FF327D6725187B7900036C4D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TsDemuxer;
+			productName = TsDemuxer;
+			productReference = FF327D6925187B7900036C4D /* libTsDemuxer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF327D6125187B7900036C4D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = iSmicro;
+				TargetAttributes = {
+					FF327D6825187B7900036C4D = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = FF327D6425187B7900036C4D /* Build configuration list for PBXProject "TsDemuxer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF327D6025187B7900036C4D;
+			productRefGroup = FF327D6A25187B7900036C4D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF327D6825187B7900036C4D /* TsDemuxer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF327D6525187B7900036C4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF327D9B2518A35D00036C4D /* Demuxer.mm in Sources */,
+				FF327D7A25187BA200036C4D /* ts.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FF327D7025187B7900036C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FF327D7125187B7900036C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF327D7325187B7900036C4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CTFS25UCD;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF327D7425187B7900036C4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2CTFS25UCD;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF327D6425187B7900036C4D /* Build configuration list for PBXProject "TsDemuxer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF327D7025187B7900036C4D /* Debug */,
+				FF327D7125187B7900036C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF327D7225187B7900036C4D /* Build configuration list for PBXNativeTarget "TsDemuxer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF327D7325187B7900036C4D /* Debug */,
+				FF327D7425187B7900036C4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF327D6125187B7900036C4D /* Project object */;
+}
