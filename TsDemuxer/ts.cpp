@@ -57,7 +57,7 @@ ts::stream::~stream(void)
 
 void ts::get_prefix_name_by_filename(const std::string& s,std::string& name)
 {
-    int ll=s.length();
+    int ll = (int)(s.length());
     const char* p=s.c_str();
     
     while(ll>0)
@@ -137,7 +137,7 @@ int ts::file::flush(void)
     
     while(l<len)
     {
-        int n=::write(fd,buf+l,len-l);
+        int n = (int)(::write(fd,buf+l,len-l));
         if(!n || n==-1)
             break;
         l+=n;
@@ -190,7 +190,7 @@ int ts::file::read(char* p,int l)
             l-=n;
         }else
         {
-            int m=::read(fd,buf,max_buf_len);
+            int m = (int)(::read(fd,buf,max_buf_len));
             if(m==-1 || !m)
                 break;
             len=m;
@@ -198,7 +198,7 @@ int ts::file::read(char* p,int l)
         }
     }
     
-    return p-tmp;
+    return (int)(p-tmp);
 }
 
 
@@ -313,7 +313,9 @@ int ts::demuxer::demux_ts_packet(const char* ptr, double* video_fps)
     bool payload_unit_start_indicator=pid&0x4000; // playload 单元开始标识（packet 不满 188 时需要填充）
     bool adaptation_field_exist=flags&0x20;
     bool payload_data_exist=flags&0x10;
+#ifdef VERBOSE
     u_int8_t continuity_counter=flags&0x0f;
+#endif
     pid&=0x1fff; // packet id 信息
 
     // header 数据校验
@@ -328,7 +330,7 @@ int ts::demuxer::demux_ts_packet(const char* ptr, double* video_fps)
     
     // skip adaptation field
     // 判断是否有附加区域
-#warning "这里不太明白，为啥要 skip"
+// 这里不太明白，为啥要 skip
     if(adaptation_field_exist)
     {
         ptr+=to_byte(ptr)+1;
@@ -379,7 +381,7 @@ int ts::demuxer::demux_ts_packet(const char* ptr, double* video_fps)
             
             ptr+=3;
             
-            int len=end_ptr-ptr;
+            int len = (int)(end_ptr-ptr);
             
             if(l>len)
             {
@@ -401,7 +403,7 @@ int ts::demuxer::demux_ts_packet(const char* ptr, double* video_fps)
             if(!s.psi.offset)
                 return -8;
             
-            int len=end_ptr-ptr;
+            int len = (int)(end_ptr-ptr);
             
             if(len>ts::table::max_buf_len-s.psi.offset)
                 return -9;
@@ -427,7 +429,7 @@ int ts::demuxer::demux_ts_packet(const char* ptr, double* video_fps)
             if(ptr>=end_ptr)
                 return -10;
             
-            int len=end_ptr-ptr-4;
+            int len = (int)(end_ptr-ptr-4);
             
             if(len<0 || len%4)
                 return -11;
@@ -529,7 +531,7 @@ int ts::demuxer::demux_ts_packet(const char* ptr, double* video_fps)
             
             while(s.psi.offset<s.psi.len)
             {
-                int len=end_ptr-ptr;
+                int len = (int)(end_ptr-ptr);
                 
                 if(len<=0)
                     return 0;
@@ -627,7 +629,7 @@ int ts::demuxer::demux_ts_packet(const char* ptr, double* video_fps)
             
             if(s.frame_num)
             {
-                int len=end_ptr-ptr;
+                int len = (int)(end_ptr-ptr);
                 
                 if(es_parse)
                 {
@@ -797,7 +799,7 @@ int ts::demuxer::demux_file(const char* name, double* video_fps)
         }
         
         int n;
-#warning "demux packet"
+// demux packet
         if((n=demux_ts_packet(buf, video_fps)))
         {
 #ifdef VERBOSE
