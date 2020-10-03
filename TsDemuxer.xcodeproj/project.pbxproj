@@ -14,15 +14,17 @@
 		FF327D7F25187BC500036C4D /* ts.h in Headers */ = {isa = PBXBuildFile; fileRef = FF327D7525187BA200036C4D /* ts.h */; platformFilter = ios; };
 		FF327D9A2518A35D00036C4D /* Demuxer.h in Headers */ = {isa = PBXBuildFile; fileRef = FF327D982518A35D00036C4D /* Demuxer.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		FF327D9B2518A35D00036C4D /* Demuxer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF327D992518A35D00036C4D /* Demuxer.mm */; platformFilter = ios; };
+		FF6D7A08252809B4001F4186 /* Demuxer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FF327D982518A35D00036C4D /* Demuxer.h */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FF327D6725187B7900036C4D /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
+				FF6D7A08252809B4001F4186 /* Demuxer.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
